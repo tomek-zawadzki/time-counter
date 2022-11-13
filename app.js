@@ -18,6 +18,12 @@ const eventSpan = document.querySelector(".event");
 
 let usersTime;
 
+const appUpdate = () => {
+  eventSpan.textContent = eventName.value;
+  imageSection.style.backgroundImage = `url('${eventImage.value}')`;
+};
+
 settingsBtn.addEventListener("click", () => {
   settings.classList.toggle("active");
 });
+saveBtn.addEventListener("click", appUpdate);
